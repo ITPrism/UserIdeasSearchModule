@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6" client="site" method="upgrade">
+	<name>MOD_USERIDEASSEARCH</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2016 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>2.5</version>
+	<creationDate>17 November, 2016</creationDate>
+	<description><![CDATA[
+	<p>UserIdeas Search is a module that adds search form and some filters on the website.</p>
+	<p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+	<p>Please, <a href="https://extensions.joomla.org/extensions/extension/contacts-and-feedback/testimonials-a-suggestions/user-ideas" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+	]]></description>
+	
+    <help url="MOD_USERIDEASSEARCH_HELP_URL"/>
+
+	<files>
+	    <filename module="mod_userideassearch">mod_userideassearch.php</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="display_categories" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_DISPLAY_CATEGORIES" description="MOD_USERIDEASSEARCH_DISPLAY_CATEGORIES_DESC" default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="display_statuses" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_DISPLAY_STATUSES" description="MOD_USERIDEASSEARCH_DISPLAY_STATUSES_DESC" default="1">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="display_button" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_DISPLAY_BUTTON" description="MOD_USERIDEASSEARCH_DISPLAY_BUTTON_DESC" default="1">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+			</fieldset>
+            <fieldset name="sorting" label="MOD_USERIDEASSEARCH_SORTING_FILTERS">
+                <field name="display_sort_title" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_SORT_BY_TITLE" description="MOD_USERIDEASSEARCH_SORT_BY_TITLE_DESC" default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="display_sort_mostvoted" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_SORT_BY_VOTES" description="MOD_USERIDEASSEARCH_SORT_BY_VOTES_DESC" default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="display_sort_latest" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_SORT_BY_RECENT" description="MOD_USERIDEASSEARCH_SORT_BY_RECENT_DESC" default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="display_sort_popular" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_SORT_BY_POPULAR" description="MOD_USERIDEASSEARCH_SORT_BY_POPULAR_DESC" default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="sort_item_class" type="text" label="MOD_USERIDEASSEARCH_ITEM_CLASS" description="MOD_USERIDEASSEARCH_SORT_ITEM_CLASS_DESC"/>
+            </fieldset>
+			
+			<fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="enable_chosen" type="radio" class="btn-group" label="MOD_USERIDEASSEARCH_ENABLE_CHOSEN" description="MOD_USERIDEASSEARCH_ENABLE_CHOSEN_DESC" default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Module - UserIdeas Search">http://cdn.itprism.com/updates/userideas/mod_userideassearch.xml</server>
+    </updateservers>
+</extension>
